@@ -15,7 +15,7 @@
                         <div class="card-header">
                             <h3 class="card-title text-center">Register Person</h3>
                         </div>
-                        <div class="card-body">
+
                             <form action="Controller">
                                 <div class="form-group">
                                     <label for="id">ID:</label>
