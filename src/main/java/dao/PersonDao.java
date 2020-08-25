@@ -46,7 +46,16 @@ public class PersonDao implements Crud{
 
     @Override
     public boolean add(Person person) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        String sql="INSERT INTO person (dni, names) VALUES ('"+person.getDni()+"','"
+                +person.getName()+"')";
+        try {
+            con=cn.getConnexion();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (Exception e) {
+            System.err.println("Error " + e.getMessage());
+        }
+        return false;
     }
 
     @Override
